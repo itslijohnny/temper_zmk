@@ -305,6 +305,11 @@
             bindings = <&kp CARET>;
             key-positions = <12 22>;
         };
+
+        screenshot {
+            bindings = <&kp LG(LC(LS(N4)))>;
+            key-positions = <11 12 13>;
+        };
     };
 
     macros {
