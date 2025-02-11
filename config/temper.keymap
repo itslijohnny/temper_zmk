@@ -170,140 +170,140 @@
 
         ESC_COMBO {
             bindings = <&gresc>;
-            key-positions = <1 2>;
+            key-positions = <1 0>;
         };
 
         BCSP_COMBO {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 10>;
+            key-positions = <9 8>;
         };
 
         FIND_COMBOS {
             bindings = <&kp LC(F)>;
-            key-positions = <25 16>;
+            key-positions = <20 13>;
         };
 
         SAVE_COMBOS {
             bindings = <&kp LC(S)>;
-            key-positions = <24 13>;
+            key-positions = <20 11>;
         };
 
         win_copy {
             bindings = <&copy_cut>;
-            key-positions = <25 27>;
+            key-positions = <20 22>;
         };
 
         SELECT_ALL_COMBOS {
             bindings = <&kp LC(A)>;
-            key-positions = <25 13>;
+            key-positions = <20 10>;
         };
 
         PASTE_COMBOS {
-            bindings = <&kp LC(SLASH)>;
-            key-positions = <25 28>;
+            bindings = <&kp LC(V)>;
+            key-positions = <20 23>;
         };
 
         wm_12 {
             bindings = <&kp LA(LG(E))>;
-            key-positions = <6 18>;
+            key-positions = <5 15>;
             layers = <3>;
         };
 
         wm_23 {
             bindings = <&kp LA(LG(T))>;
-            key-positions = <18 30>;
+            key-positions = <15 25>;
             layers = <3>;
         };
 
         left_par {
             bindings = <&lpar_less>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
         };
 
         r_par {
             bindings = <&rpar_greater>;
-            key-positions = <20 21>;
+            key-positions = <17 18>;
         };
 
         l_br {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
+            key-positions = <26 27>;
         };
 
         r_br {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <32 33>;
+            key-positions = <27 28>;
         };
 
         plus {
             bindings = <&kp KP_PLUS>;
-            key-positions = <7 19>;
+            key-positions = <6 16>;
         };
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <19 31>;
+            key-positions = <16 26>;
         };
 
         star {
             bindings = <&kp STAR>;
-            key-positions = <8 20>;
+            key-positions = <7 17>;
         };
 
         spl {
             bindings = <&slash_bslash>;
-            key-positions = <20 32>;
+            key-positions = <17 27>;
         };
 
         and {
             bindings = <&kp AMPERSAND>;
-            key-positions = <9 21>;
+            key-positions = <8 18>;
         };
 
         or {
             bindings = <&kp PIPE>;
-            key-positions = <22 34>;
+            key-positions = <18 28>;
         };
 
         equ {
             bindings = <&kp EQUAL>;
-            key-positions = <6 18>;
+            key-positions = <5 15>;
             layers = <0 1>;
         };
 
         under_sc {
             bindings = <&kp UNDER>;
-            key-positions = <18 30>;
+            key-positions = <15 25>;
         };
 
         grave_combos {
             bindings = <&kp GRAVE>;
-            key-positions = <16 28>;
+            key-positions = <13 23>;
         };
 
         at_combos {
             bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
+            key-positions = <1 11>;
         };
 
         hash_combos {
             bindings = <&kp HASH>;
-            key-positions = <3 15>;
+            key-positions = <2 12>;
         };
 
         dollor_combos {
             bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
+            key-positions = <3 13>;
         };
 
         percent_combos {
             bindings = <&kp PERCENT>;
-            key-positions = <14 26>;
+            key-positions = <11 21>;
         };
 
         hat_combos {
             bindings = <&kp CARET>;
-            key-positions = <15 27>;
+            key-positions = <12 22>;
         };
     };
 
