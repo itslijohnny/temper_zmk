@@ -328,6 +328,11 @@
             bindings = <&kp LC(Z)>;
             key-positions = <20 21>;
         };
+
+        cap {
+            bindings = <&caps_word>;
+            key-positions = <10 19>;
+        };
     };
 
     macros {
