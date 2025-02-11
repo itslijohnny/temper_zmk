@@ -328,6 +328,31 @@
             bindings = <&kp LC(Z)>;
             key-positions = <20 21>;
         };
+
+        bslash {
+            bindings = <&kp BSLH>;
+            key-positions = <13 17 27>;
+        };
+
+        rb_less {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <13 16 17>;
+        };
+
+        rb_gt {
+            bindings = <&kp GT>;
+            key-positions = <13 17 18>;
+        };
+
+        lpb {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <13 26 27>;
+        };
+
+        rpb {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <13 27 28>;
+        };
     };
 
     macros {
