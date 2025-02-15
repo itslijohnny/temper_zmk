@@ -324,7 +324,7 @@
             key-positions = <11 12 13>;
         };
 
-        undo {
+        undo_com {
             bindings = <&kp LC(Z)>;
             key-positions = <20 21>;
         };
