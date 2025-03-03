@@ -176,6 +176,13 @@
             hold-trigger-on-release;
             require-prior-idle-ms = <50>;
         };
+
+        ZMK_TAP_DANCE: ZMK_TAP_DANCE {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ZMK_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&caps_word>, <&sl 2>;
+        };
     };
 
     combos {
