@@ -199,7 +199,7 @@
         ZMK_HOLD_TAP: smart_num {
             compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <200>;
-            quick-tap-ms = <QUICK_TAP_MS>
+            quick-tap-ms = <QUICK_TAP_MS>;
             flavor = "balanced";
             #binding-cells = <0>;
             bindings = <&mo>, <&num_dance>;
