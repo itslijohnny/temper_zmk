@@ -196,7 +196,7 @@
             bindings = <&num_word 2>, <&sl 2>;
         };
         
-        ZMK_HOLD_TAP: num_dance {
+        ZMK_HOLD_TAP: smart_num {
             compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>
