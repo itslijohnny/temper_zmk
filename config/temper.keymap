@@ -321,7 +321,7 @@
 
         screenshot {
             bindings = <&kp LG(LC(LS(N4)))>;
-            key-positions = <11 12 13>;
+            key-positions = <11 12 13 31>;
         };
 
         undo_com {
@@ -341,12 +341,22 @@
 
         find2 {
             bindings = <&kp LC(F)>;
-            key-positions = <20 13>;
+            key-positions = <13 20>;
         };
 
         swith_position {
             bindings = <&tog 1>;
             key-positions = <24 25>;
+        };
+
+        find2 {
+            bindings = <&kp LC(F)>;
+            key-positions = <13 10>;
+        };
+
+        save2 {
+            bindings = <&kp LC(S)>;
+            key-positions = <12 10>;
         };
     };
 
