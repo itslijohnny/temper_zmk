@@ -15,7 +15,7 @@
 #define QUICK_TAP_MS 75
 
 #define NUM 2
-#define SMART_NUM &smart_num NUM 0
+#define SMART_NUM &smart_num2 NUM 0
 
 
 / {
@@ -195,8 +195,8 @@
             #binding-cells = <0>;
             bindings = <&num_word 2>, <&sl 2>;
         };
-        
-        smart_num: smart_num {
+
+        smart_num2: smart_num2 {
             compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
