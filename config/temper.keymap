@@ -189,14 +189,14 @@
             require-prior-idle-ms = <50>;
         };
 
-        ZMK_TAP_DANCE: num_dance {
+        num_dance: num_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "ZMK_TAP_DANCE";
             #binding-cells = <0>;
             bindings = <&num_word 2>, <&sl 2>;
         };
         
-        ZMK_HOLD_TAP: smart_num {
+        smart_num: smart_num {
             compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
