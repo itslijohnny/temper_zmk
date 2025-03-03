@@ -14,6 +14,10 @@
 #define REQUIRE_PRIOR_IDLE_MS 150
 #define QUICK_TAP_MS 75
 
+#define NUM 2
+#define SMART_NUM &smart_num NUM 0
+
+
 / {
     behaviors {
         hml: hml {
@@ -185,11 +189,20 @@
             require-prior-idle-ms = <50>;
         };
 
-        ZMK_TAP_DANCE: ZMK_TAP_DANCE {
+        ZMK_TAP_DANCE: num_dance {
             compatible = "zmk,behavior-tap-dance";
             label = "ZMK_TAP_DANCE";
             #binding-cells = <0>;
-            bindings = <&caps_word>, <&sl 2>;
+            bindings = <&num_word 2>, <&sl 2>;
+        };
+        
+        ZMK_HOLD_TAP: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>
+            flavor = "balanced";
+            #binding-cells = <0>;
+            bindings = <&mo>, <&num_dance>;
         };
     };
 
@@ -399,7 +412,7 @@
   &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J         &kp L               &kp U          &kp Y        &kp SQT
   &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M         &hmr RIGHT_SHIFT N  &hmr RGUI E    &hmr LALT I  &hmr RCTRL O
   &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K         &kp H               &com_sem       &dot_col     &exc_qmk
-                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER  &ltm 2 BACKSPACE    &ltm 5 DELETE
+                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER  SMART_NUM    &ltm 5 DELETE
             >;
         };
 
