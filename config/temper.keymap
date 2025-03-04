@@ -15,6 +15,7 @@
 #define QUICK_TAP_MS 75
 #define NUM 2
 #define SMART_NUM &smart_num NUM 0
+#define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
 
 / {
     behaviors {
@@ -191,7 +192,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ZMK_TAP_DANCE";
             #binding-cells = <0>;
-            bindings = <&num_word 2>, <&sl 2>;
+            bindings = <&kp BAC_DEL>,<&num_word 2>;
         };
 
         smart_num: smart_num {
@@ -410,7 +411,7 @@
   &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J                   &kp L               &kp U        &kp Y        &kp SQT
   &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M                   &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
   &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K                   &kp H               &com_sem     &dot_col     &exc_qmk
-                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER SMART_NUM  &ltm 5 DELETE
+                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER &num_dance  &ltm 5 DELETE
             >;
         };
 
@@ -430,7 +431,7 @@
   &none             &kp N7              &kp N8        &kp N9         &none         &none       &kp N7         &kp N8             &kp N9        &none
   &kp LEFT_CONTROL  &hml LALT NUMBER_4  &hml LGUI N5  &hml LSHFT N6  &kp N0        &kp N0      &hmr RSHFT N4  &hmr RIGHT_GUI N5  &hmr RALT N6  &kp RIGHT_CONTROL
   &none             &kp N1              &kp N2        &kp N3         &kp PERIOD    &kp PERIOD  &kp N1         &kp NUMBER_2       &kp N3        &none
-                                        &trans        &trans         &trans        &trans      &trans         &trans
+                                        CANCEL        &trans         &trans        &trans      &trans         &trans
             >;
         };
 
