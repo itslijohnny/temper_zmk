@@ -375,21 +375,6 @@
             bindings = <&tog 1>;
             key-positions = <24 25>;
         };
-
-        find3 {
-            bindings = <&kp LC(F)>;
-            key-positions = <13 10>;
-        };
-
-        save2 {
-            bindings = <&kp LC(S)>;
-            key-positions = <12 10>;
-        };
-
-        find4 {
-            bindings = <&kp LC(F)>;
-            key-positions = <10 2>;
-        };
     };
 
     macros {
