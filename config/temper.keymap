@@ -366,14 +366,26 @@
             key-positions = <20 23>;
         };
 
-        find2 {
-            bindings = <&kp LC(F)>;
+        newtab {
+            bindings = <&kp LC(T)>;
             key-positions = <13 20>;
+            require-prior-idle-ms = <150>;
         };
 
         swith_position {
             bindings = <&tog 1>;
             key-positions = <24 25>;
+        };
+
+        find3 {
+            bindings = <&kp LC(F)>;
+            key-positions = <2 10>;
+            require-prior-idle-ms = <150>;
+        };
+
+        save2 {
+            bindings = <&kp LC(S)>;
+            key-positions = <10 12>;
         };
     };
 
