@@ -4,19 +4,17 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <behaviors/num_word.dtsi>
 
 /* Global defaults */
 
 #define REQUIRE_PRIOR_IDLE_MS 150
 #define QUICK_TAP_MS 75
-
 #define NUM 2
 #define SMART_NUM &smart_num NUM 0
-
 
 / {
     behaviors {
@@ -216,7 +214,7 @@
 
         BCSP_COMBO {
             bindings = <&bac_del>;
-            key-positions = <9 8>;
+            key-positions = <6 7>;
         };
 
         FIND_COMBOS {
@@ -409,10 +407,10 @@
         base_layer {
             label = "ColemakDH";
             bindings = <
-  &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J         &kp L               &kp U          &kp Y        &kp SQT
-  &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M         &hmr RIGHT_SHIFT N  &hmr RGUI E    &hmr LALT I  &hmr RCTRL O
-  &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K         &kp H               &com_sem       &dot_col     &exc_qmk
-                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER  SMART_NUM    &ltm 5 DELETE
+  &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J                   &kp L               &kp U        &kp Y        &kp SQT
+  &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M                   &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
+  &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K                   &kp H               &com_sem     &dot_col     &exc_qmk
+                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER SMART_NUM  &ltm 5 DELETE
             >;
         };
 
