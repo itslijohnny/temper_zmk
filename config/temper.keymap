@@ -192,7 +192,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ZMK_TAP_DANCE";
             #binding-cells = <0>;
-            bindings = <&kp BAC_DEL>,<&num_word 2>;
+            bindings = <&bac_del>, <&num_word 2>;
         };
 
         smart_num: smart_num {
