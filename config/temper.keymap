@@ -214,7 +214,7 @@
         };
 
         BCSP_COMBO {
-            bindings = <&bac_del>;
+            bindings = <&num_word 2>;
             key-positions = <6 7>;
         };
 
@@ -411,7 +411,7 @@
   &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J                   &kp L               &kp U        &kp Y        &kp SQT
   &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M                   &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
   &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K                   &kp H               &com_sem     &dot_col     &exc_qmk
-                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER &num_dance  &ltm 5 DELETE
+                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER <&bac_del>  &ltm 5 DELETE
             >;
         };
 
