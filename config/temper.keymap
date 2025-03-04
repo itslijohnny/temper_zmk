@@ -408,10 +408,10 @@
         base_layer {
             label = "ColemakDH";
             bindings = <
-  &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J           &kp L               &kp U        &kp Y        &kp SQT
-  &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M           &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
-  &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K           &kp H               &com_sem     &dot_col     &exc_qmk
-                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER    &ltm 2 &bac_del  &ltm 5 DELETE
+  &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J         &kp L               &kp U        &kp Y        &kp SQT
+  &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M         &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
+  &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K         &kp H               &com_sem     &dot_col     &exc_qmk
+                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER  &ltm2 2 0           &bac_del
             >;
         };
 
@@ -428,19 +428,19 @@
         num_layer {
             label = "NUM";
             bindings = <
-  &trans             &kp N7              &kp N8        &kp N9         &trans       &trans      &trans       &trans    &trans        &trans
-  &kp LEFT_CONTROL  &hml LALT NUMBER_4  &hml LGUI N5  &hml LSHFT N6  &kp N0        &trans      &trans       &trans    &trans        &trans
-  &trans             &kp N1              &kp N2        &kp N3         &kp PERIOD   &trans      &trans       &trans    &trans        &trans
-                                        CANCEL        &trans         &trans        &trans      &trans       &trans
+  &trans            &kp N7              &kp N8        &kp N9         &trans        &trans  &trans  &trans  &trans  &trans
+  &kp LEFT_CONTROL  &hml LALT NUMBER_4  &hml LGUI N5  &hml LSHFT N6  &kp N0        &trans  &trans  &trans  &trans  &trans
+  &trans            &kp N1              &kp N2        &kp N3         &kp PERIOD    &trans  &trans  &trans  &trans  &trans CANCEL
+                                        &trans        &trans         &trans        &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &trans          &trans           &kp UP_ARROW    &trans             &kp PG_UP    &kp HOME  &trans            &kp UP_ARROW          &trans           &trans
-  &trans            &hml LALT LEFT  &hml LCMD DOWN  &hml LSHFT RIGHT  &kp PG_DN    &kp END   &hmr RSHFT LEFT  &hmr RCMD DOWN_ARROW  &hmr RALT RIGHT  &trans
-  &trans          &trans           &trans           &trans             &trans        &trans     &trans            &trans                 &trans            &trans
-                                    &trans          &trans            &trans       &trans    &trans           &trans
+  &trans  &trans          &kp UP_ARROW    &trans            &kp PG_UP    &kp HOME  &trans           &kp UP_ARROW          &trans           &trans
+  &trans  &hml LALT LEFT  &hml LCMD DOWN  &hml LSHFT RIGHT  &kp PG_DN    &kp END   &hmr RSHFT LEFT  &hmr RCMD DOWN_ARROW  &hmr RALT RIGHT  &trans
+  &trans  &trans          &trans          &trans            &trans       &trans    &trans           &trans                &trans           &trans
+                          &trans          &trans            &trans       &trans    &trans           &trans
             >;
 
             label = "NAV";
