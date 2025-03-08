@@ -256,36 +256,43 @@
         left_par {
             bindings = <&lpar_less>;
             key-positions = <16 17>;
+            require-prior-idle-ms = <150>;
         };
 
         r_par {
             bindings = <&rpar_greater>;
             key-positions = <17 18>;
+            require-prior-idle-ms = <150>;
         };
 
         l_br {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <26 27>;
+            key-positions = <27 26>;
+            require-prior-idle-ms = <150>;
         };
 
         r_br {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <27 28>;
+            require-prior-idle-ms = <150>;
         };
 
         plus {
             bindings = <&kp KP_PLUS>;
             key-positions = <6 16>;
+            require-prior-idle-ms = <150>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <16 26>;
+            require-prior-idle-ms = <150>;
         };
 
         star {
             bindings = <&kp STAR>;
             key-positions = <7 17>;
+            require-prior-idle-ms = <150>;
         };
 
         spl {
@@ -296,6 +303,7 @@
         and {
             bindings = <&kp AMPERSAND>;
             key-positions = <8 18>;
+            require-prior-idle-ms = <150>;
         };
 
         or {
@@ -317,31 +325,37 @@
         grave_combos {
             bindings = <&kp GRAVE>;
             key-positions = <13 23>;
+            require-prior-idle-ms = <150>;
         };
 
         at_combos {
             bindings = <&kp AT_SIGN>;
             key-positions = <1 11>;
+            require-prior-idle-ms = <150>;
         };
 
         hash_combos {
             bindings = <&kp HASH>;
             key-positions = <2 12>;
+            require-prior-idle-ms = <150>;
         };
 
         dollor_combos {
             bindings = <&kp DOLLAR>;
             key-positions = <3 13>;
+            require-prior-idle-ms = <150>;
         };
 
         percent_combos {
             bindings = <&kp PERCENT>;
             key-positions = <11 21>;
+            require-prior-idle-ms = <150>;
         };
 
         hat_combos {
             bindings = <&kp CARET>;
             key-positions = <12 22>;
+            require-prior-idle-ms = <150>;
         };
 
         screenshot {
@@ -403,12 +417,10 @@
         base_layer {
             label = "ColemakDH";
             bindings = <
-
   &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J         &kp L               &kp U        &kp Y        &kp SQT
   &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M         &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
   &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K         &kp H               &com_sem     &dot_col     &exc_qmk
                              &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER  &ltm2 2 0           &ltm 5 DEL
-
             >;
         };
 
