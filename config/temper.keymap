@@ -364,9 +364,10 @@
             key-positions = <20 23>;
         };
 
-        find2 {
-            bindings = <&kp LC(F)>;
+        newtab {
+            bindings = <&kp LC(T)>;
             key-positions = <13 20>;
+            require-prior-idle-ms = <150>;
         };
 
         swith_position {
@@ -376,17 +377,13 @@
 
         find3 {
             bindings = <&kp LC(F)>;
-            key-positions = <13 10>;
+            key-positions = <2 10>;
+            require-prior-idle-ms = <150>;
         };
 
         save2 {
             bindings = <&kp LC(S)>;
-            key-positions = <12 10>;
-        };
-
-        find4 {
-            bindings = <&kp LC(F)>;
-            key-positions = <10 2>;
+            key-positions = <10 12>;
         };
     };
 
@@ -406,10 +403,12 @@
         base_layer {
             label = "ColemakDH";
             bindings = <
-  &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J           &kp L               &kp U        &kp Y        &kp SQT
-  &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M           &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
-  &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K           &kp H               &com_sem     &dot_col     &exc_qmk
-                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER    &ltm2 2  &ltm 5 DELETE
+
+  &kp Q         &kp W        &kp F          &kp P              &kp B         &kp J         &kp L               &kp U        &kp Y        &kp SQT
+  &hml LCTRL A  &hml LALT R  &hml LGUI S    &hml LEFT_SHIFT T  &kp G         &kp M         &hmr RIGHT_SHIFT N  &hmr RGUI E  &hmr LALT I  &hmr RCTRL O
+  &kp Z         &kp X        &kp C          &kp D              &kp V         &kp K         &kp H               &com_sem     &dot_col     &exc_qmk
+                             &ltm 4 ESCAPE  &ltm 2 SPACE       &ltm 3 TAB    &ltm 3 ENTER  &ltm2 2 0           &ltm 5 DEL
+
             >;
         };
 
@@ -426,19 +425,19 @@
         num_layer {
             label = "NUM";
             bindings = <
-  &trans             &kp N7              &kp N8        &kp N9         &trans       &trans      &trans       &trans    &trans        &trans
-  &kp LEFT_CONTROL  &hml LALT NUMBER_4  &hml LGUI N5  &hml LSHFT N6  &kp N0        &trans      &trans       &trans    &trans        &trans
-  &trans             &kp N1              &kp N2        &kp N3         &kp PERIOD   &trans      &trans       &trans    &trans        &trans
-                                        CANCEL        &trans         &trans        &trans      &trans       &trans
+  &trans            &kp N7              &kp N8        &kp N9         &trans        &trans  &trans  &trans  &trans  &trans
+  &kp LEFT_CONTROL  &hml LALT NUMBER_4  &hml LGUI N5  &hml LSHFT N6  &kp N0        &trans  &trans  &trans  &trans  &trans
+  &trans            &kp N1              &kp N2        &kp N3         &kp PERIOD    &trans  &trans  &trans  &trans  &trans CANCEL
+                                        &trans        &trans         &trans        &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &trans          &trans           &kp UP_ARROW    &trans             &kp PG_UP    &kp HOME  &trans            &kp UP_ARROW          &trans           &trans
-  &trans            &hml LALT LEFT  &hml LCMD DOWN  &hml LSHFT RIGHT  &kp PG_DN    &kp END   &hmr RSHFT LEFT  &hmr RCMD DOWN_ARROW  &hmr RALT RIGHT  &trans
-  &trans          &trans           &trans           &trans             &trans        &trans     &trans            &trans                 &trans            &trans
-                                    &trans          &trans            &trans       &trans    &trans           &trans
+  &trans  &trans          &kp UP_ARROW    &trans            &kp PG_UP    &kp HOME  &trans           &kp UP_ARROW          &trans           &trans
+  &trans  &hml LALT LEFT  &hml LCMD DOWN  &hml LSHFT RIGHT  &kp PG_DN    &kp END   &hmr RSHFT LEFT  &hmr RCMD DOWN_ARROW  &hmr RALT RIGHT  &trans
+  &trans  &trans          &trans          &trans            &trans       &trans    &trans           &trans                &trans           &trans
+                          &trans          &trans            &trans       &trans    &trans           &trans
             >;
 
             label = "NAV";
