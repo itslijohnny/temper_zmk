@@ -400,6 +400,16 @@
             key-positions = <10 12>;
             require-prior-idle-ms = <300>;
         };
+
+        func_spa1 {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <19 31>;
+        };
+
+        func_spa2 {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <31 10>;
+        };
     };
 
     macros {
