@@ -121,7 +121,7 @@
         hmsl: hmsl {
             compatible = "zmk,behavior-hold-tap";
             label = "HMSL";
-            bindings = <&lshift_cap>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
