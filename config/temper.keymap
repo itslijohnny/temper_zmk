@@ -115,7 +115,7 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <0>;
         };
 
         hmsl: hmsl {
