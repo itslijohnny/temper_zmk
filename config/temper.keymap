@@ -225,7 +225,7 @@
         };
 
         magic_num {
-            bindings = <&num_dance>;
+            bindings = <&num_word 2>;
             key-positions = <6 7>;
         };
 
