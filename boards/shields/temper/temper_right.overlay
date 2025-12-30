@@ -47,8 +47,8 @@
             // RDY GPIO - Using P0.09 (D10) as dummy
             rdy-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
             
-            // Reset GPIO - Using P0.06 (D4) as dummy
-            reset-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+            // Reset GPIO - Using P0.010 (11) as dummy
+            reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
             
             // Gesture configuration
             one-finger-tap;
