@@ -19,3 +19,50 @@
         , <&pro_micro 21 GPIO_ACTIVE_HIGH>
         ;
 };
+
+// TPS43 Trackpad Configuration
+// Connected to standard I2C pins: D2/P0.17 (SDA) and D3/P0.20 (SCL)
+// Plus VCC and GND for power
+&pro_micro_i2c {
+    status = "okay";
+    
+    tps43: iqs5xx@74 {
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
+        label = "TPS43";
+        status = "okay";
+        
+        // If your trackpad has an RDY/interrupt pin, uncomment and adjust:
+        // rdy-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;  // Example: P0.06
+        
+        // If your trackpad has a reset pin, uncomment and adjust:
+        // reset-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;  // Example: P0.08
+        
+        // Gesture configuration
+        one-finger-tap;
+        press-and-hold;
+        press-and-hold-time = <250>;
+        two-finger-tap;
+        
+        // Scrolling
+        scroll;
+        natural-scroll-y;
+        
+        // Sensitivity settings
+        bottom-beta = <5>;
+        stationary-threshold = <5>;
+        
+        // Axis configuration (may need adjustment based on orientation)
+        // Uncomment these if the trackpad orientation needs adjustment:
+        // switch-xy;
+        // flip-x;
+        // flip-y;
+    };
+};
+
+/ {
+    tps43_input: tps43_input {
+        compatible = "zmk,input-listener";
+        device = <&tps43>;
+    };
+};
