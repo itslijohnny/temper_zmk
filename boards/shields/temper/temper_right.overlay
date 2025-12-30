@@ -32,11 +32,13 @@
         label = "TPS43";
         status = "okay";
         
-        // If your trackpad has an RDY/interrupt pin, uncomment and adjust:
-        // rdy-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;  // Example: P0.06
+        // RDY GPIO - Required by driver. Using P0.09 (D10)
+        // This pin is unused on your board and serves as a dummy pin
+        // If your trackpad has a physical RDY pin, you can connect it to D10
+        rdy-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
         
-        // If your trackpad has a reset pin, uncomment and adjust:
-        // reset-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;  // Example: P0.08
+        // dummy 
+        reset-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
         
         // Gesture configuration
         one-finger-tap;
@@ -49,7 +51,7 @@
         natural-scroll-y;
         
         // Sensitivity settings
-        bottom-beta = <5>;
+        bottom-beta = <15>;
         stationary-threshold = <5>;
         
         // Axis configuration (may need adjustment based on orientation)
