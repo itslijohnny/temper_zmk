@@ -20,7 +20,7 @@
         ;
 };
 
-// TPS43 Trackpad Configuration
+// TPS43 Trackpad Configuration for Peripheral (Right Side)
 // Connected to standard I2C pins: D2/P0.17 (SDA) and D3/P0.20 (SCL)
 // Plus VCC and GND for power
 &pro_micro_i2c {
@@ -60,9 +60,7 @@
     };
 };
 
-/ {
-    tps43_input: tps43_input {
-        compatible = "zmk,input-listener";
-        device = <&tps43>;
-    };
+// Configure the input-split to proxy trackpad data to central
+&tps43_split {
+    device = <&tps43>;
 };

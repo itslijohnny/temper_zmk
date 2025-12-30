@@ -15,3 +15,8 @@
         , <&pro_micro 15 GPIO_ACTIVE_HIGH>
         ;
 };
+
+// Enable the trackpad listener on the central (left) side
+&tps43_listener {
+    status = "okay";
+};
