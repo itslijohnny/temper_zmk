@@ -21,54 +21,40 @@
 };
 
 // TPS43 Trackpad Configuration for Peripheral (Right Side)
-// Using GPIO bit-banged I2C for 2-pin trackpad (SDA + SCL only)
 // Connected to: D2/P0.17 (SDA) and D3/P0.20 (SCL)
 
-/ {
-    gpio_i2c: gpio-i2c {
-        compatible = "gpio-i2c";
-        #address-cells = <1>;
-        #size-cells = <0>;
+&pro_micro_i2c {
+    status = "okay";
+    
+    tps43: iqs5xx@74 {
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
         status = "okay";
         
-        // D2 (P0.17) = SDA, D3 (P0.20) = SCL
-        sda-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
-        scl-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN | GPIO_PULL_UP)>;
+        // RDY GPIO - Using P0.09 (D10) as dummy - required by driver
+        rdy-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
         
-        // I2C timing (adjust if needed)
-        clock-frequency = <100000>; // 100 kHz (standard mode)
+        // Reset GPIO - Using P0.10 (D11) as dummy - optional
+        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
         
-        tps43: iqs5xx@74 {
-            compatible = "azoteq,iqs5xx";
-            reg = <0x74>;
-            label = "TPS43";
-            status = "okay";
-            
-            // RDY GPIO - Using P0.09 (D10) as dummy
-            rdy-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-            
-            // Reset GPIO - Using P0.010 (11) as dummy
-            reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-            
-            // Gesture configuration
-            one-finger-tap;
-            press-and-hold;
-            press-and-hold-time = <250>;
-            two-finger-tap;
-            
-            // Scrolling
-            scroll;
-            natural-scroll-y;
-            
-            // Sensitivity settings
-            bottom-beta = <15>;
-            stationary-threshold = <5>;
-            
-            // Axis configuration (may need adjustment based on orientation)
-            // switch-xy;
-            // flip-x;
-            // flip-y;
-        };
+        // Gesture configuration
+        one-finger-tap;
+        press-and-hold;
+        press-and-hold-time = <250>;
+        two-finger-tap;
+        
+        // Scrolling
+        scroll;
+        natural-scroll-y;
+        
+        // Sensitivity settings
+        bottom-beta = <15>;
+        stationary-threshold = <5>;
+        
+        // Axis configuration (may need adjustment based on orientation)
+        // switch-xy;
+        // flip-x;
+        // flip-y;
     };
 };
 
