@@ -5,6 +5,7 @@
  */
 
 #include "temper.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
 
 &default_transform {
     col-offset = <5>;
@@ -22,9 +23,33 @@
 
 // TPS43 Trackpad Configuration for Peripheral (Right Side)
 // Connected to: D2/P0.17 (SDA) and D3/P0.20 (SCL)
+// Using I2C1 as a separate bus from the OLED's I2C
 
-&i2c0 {
+// Configure I2C1 pinctrl for pins P0.17 (SDA) and P0.20 (SCL)
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c1 {
+    compatible = "nordic,nrf-twi";
     status = "okay";
+    
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
     
     tps43: iqs5xx@74 {
         status = "okay";
