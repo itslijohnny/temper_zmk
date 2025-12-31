@@ -22,11 +22,34 @@
 };
 
 // TPS43 Trackpad Configuration for Peripheral (Right Side)
-// Trying to use pro_micro_i2c (same bus as OLED on left side)
-// Since right side has no OLED, this bus should be available
+// Connected to: D2/P0.17 (SDA) and D3/P0.20 (SCL)
+// Using I2C1 as a separate bus since trackpad is on different pins than default I2C
 
-&pro_micro_i2c {
+// Configure I2C1 pinctrl for pins P0.17 (SDA) and P0.20 (SCL)
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c1 {
+    compatible = "nordic,nrf-twim";
     status = "okay";
+    
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
     
     tps43: iqs5xx@74 {
         status = "okay";
