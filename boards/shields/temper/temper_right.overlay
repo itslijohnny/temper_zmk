@@ -50,9 +50,9 @@
         stationary-threshold = <5>;
         
         // Axis configuration - test one at a time
-        switch_xy;
-        flip_x;
-        flip_y;
+        switch-xy;
+        flip-x;
+        flip-y;
     };
 };
 
