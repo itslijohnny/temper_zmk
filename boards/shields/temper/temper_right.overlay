@@ -49,10 +49,11 @@
         bottom-beta = <15>;
         stationary-threshold = <5>;
         
-        // Axis configuration - test one at a time
-        switch-xy;
-        flip-x;
-        flip-y;
+        // Axis configuration - test combinations
+        // Uncomment only the transformations needed:
+        // switch-xy;     // Swap X and Y axes
+        // flip-x;        // Invert X direction
+        // flip-y;        // Invert Y direction
     };
 };
 
