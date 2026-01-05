@@ -51,8 +51,8 @@
         
         // Axis configuration (may need adjustment based on orientation)
         switch-xy;
-        flip_x;
-        flip_y;
+        flip-x;
+        flip-y;
     };
 };
 
