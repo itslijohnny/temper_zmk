@@ -23,41 +23,17 @@
 
 // TPS43 Trackpad Configuration for Peripheral (Right Side)
 // Connected to: D2/P0.17 (SDA) and D3/P0.20 (SCL)
-// Using I2C1 as a separate bus since trackpad is on different pins than default I2C
 
-// Configure I2C1 pinctrl for pins P0.17 (SDA) and P0.20 (SCL)
-&pinctrl {
-    i2c1_default: i2c1_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
-        };
-    };
-
-    i2c1_sleep: i2c1_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
-            low-power-enable;
-        };
-    };
-};
-
-&i2c1 {
-    compatible = "nordic,nrf-twim";
+&pro_micro_i2c {
     status = "okay";
-    
-    pinctrl-0 = <&i2c1_default>;
-    pinctrl-1 = <&i2c1_sleep>;
-    pinctrl-names = "default", "sleep";
     
     tps43: iqs5xx@74 {
         status = "okay";
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
         
-        reset-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
-        rdy-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+        reset-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
+        rdy-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
         
         // Gesture configuration
         one-finger-tap;
