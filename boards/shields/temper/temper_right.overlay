@@ -50,7 +50,7 @@
         stationary-threshold = <5>;
         
         // Axis configuration (may need adjustment based on orientation)
-        switch-xy;
+        // switch-xy;
         // flip-x;
         // flip-y;
     };
