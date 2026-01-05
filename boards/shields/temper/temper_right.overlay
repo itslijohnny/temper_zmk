@@ -32,8 +32,8 @@
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
         
-        // reset-gpios = <&pro_micro 1 GPIO_ACTIVE_LOW>;
-        rdy-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+        // reset-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+        rdy-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
         
         // Gesture configuration
         one-finger-tap;
