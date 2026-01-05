@@ -7,6 +7,13 @@
 #include "temper.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
+/ {
+    tps43_input: tps43_input {
+        compatible = "zmk,input-listener";
+        device = <&tps43>;
+    };
+};
+
 &default_transform {
     col-offset = <5>;
 };
