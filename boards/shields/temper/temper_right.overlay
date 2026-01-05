@@ -24,30 +24,36 @@
 // TPS43 Trackpad Configuration for Peripheral (Right Side)
 // Connected to: D2/P0.17 (SDA) and D3/P0.20 (SCL)
 
-&tps43 {
+&pro_micro_i2c {
     status = "okay";
     
-    // reset-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
-    rdy-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-    
-    // Gesture configuration
-    one-finger-tap;
-    press-and-hold;
-    press-and-hold-time = <250>;
-    two-finger-tap;
-    
-    // Scrolling
-    scroll;
-    natural-scroll-y;
-    
-    // Sensitivity settings
-    bottom-beta = <15>;
-    stationary-threshold = <5>;
-    
-    // Axis configuration (may need adjustment based on orientation)
-    // switch-xy;
-    // flip-x;
-    // flip-y;
+    tps43: iqs5xx@74 {
+        status = "okay";
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
+        
+        reset-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+        rdy-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+        
+        // Gesture configuration
+        one-finger-tap;
+        press-and-hold;
+        press-and-hold-time = <250>;
+        two-finger-tap;
+        
+        // Scrolling
+        scroll;
+        natural-scroll-y;
+        
+        // Sensitivity settings
+        bottom-beta = <15>;
+        stationary-threshold = <5>;
+        
+        // Axis configuration (may need adjustment based on orientation)
+        switch-xy;
+        // flip-x;
+        // flip-y;
+    };
 };
 
 // Configure the input-split to proxy trackpad data to central
