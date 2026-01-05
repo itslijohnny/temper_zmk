@@ -49,10 +49,10 @@
         bottom-beta = <15>;
         stationary-threshold = <5>;
         
-        // Axis configuration (may need adjustment based on orientation)
-        switch-xy;
+        // Axis configuration - test one at a time
+        // switch-xy;  // Temporarily disabled for testing
         flip-x;
-        flip-y;
+        // flip-y;
     };
 };
 
