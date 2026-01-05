@@ -6,8 +6,10 @@
 
 #include "temper.dtsi"
 
-&chosen {
-    zephyr,display = &oled;
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
 };
 
 &kscan0 {
