@@ -51,8 +51,8 @@
         
         // Axis configuration
         switch-xy;     // Swap X and Y axes
-        flip-x;        // Invert X direction  
-        flip-y;        // Invert Y direction
+        // flip-x;        // Invert X direction  
+        //flip-y;        // Invert Y direction
     };
 };
 
