@@ -43,17 +43,16 @@
         
         // Scrolling
         scroll;
-        natural-scroll-y;
+        // natural-scroll-y;  // Disabled for macOS testing
         
         // Sensitivity settings
         bottom-beta = <15>;
         stationary-threshold = <5>;
         
-        // Axis configuration - test combinations
-        // Uncomment only the transformations needed:
+        // Axis configuration
         // switch-xy;     // Swap X and Y axes
-        // flip-x;        // Invert X direction
-        // flip-y;        // Invert Y direction
+        flip-x;        // Invert X direction  
+        flip-y;        // Invert Y direction
     };
 };
 
