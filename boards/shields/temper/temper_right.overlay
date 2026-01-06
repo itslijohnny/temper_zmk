@@ -50,7 +50,7 @@
         stationary-threshold = <5>;
         
         // Axis configuration
-        // switch-xy;     // Swap X and Y axes
+        switch-xy;     // Swap X and Y axes
         flip-x;        // Invert X direction  
         flip-y;        // Invert Y direction
     };
