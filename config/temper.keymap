@@ -413,12 +413,12 @@
 
         LeftMouse {
             bindings = <&mkp LCLK>;
-            key-positions = <23 22 26 27>;
+            key-positions = <26 27>;
         };
 
         rightMouse {
             bindings = <&mkp RCLK>;
-            key-positions = <21 22 27 28>;
+            key-positions = <27 28>;
         };
     };
 
