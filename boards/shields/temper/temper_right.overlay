@@ -5,6 +5,7 @@
  */
 
 #include "temper.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
 
 &default_transform {
     col-offset = <5>;
@@ -18,4 +19,36 @@
         , <&pro_micro 20 GPIO_ACTIVE_HIGH>
         , <&pro_micro 21 GPIO_ACTIVE_HIGH>
         ;
+};
+
+&pro_micro_i2c {
+    status = "okay";
+
+    tps43: iqs5xx@74 {
+        status = "okay";
+        compatible = "azoteq,iqs5xx";
+        reg = <0x74>;
+
+        reset-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
+        rdy-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+
+        one-finger-tap;
+        press-and-hold;
+        press-and-hold-time = <250>;
+        two-finger-tap;
+
+        scroll;
+        natural-scroll-y;
+
+        bottom-beta = <15>;
+        stationary-threshold = <5>;
+
+        switch-xy;
+        // flip-x;
+        // flip-y;
+    };
+};
+
+&tps43_split {
+    device = <&tps43>;
 };
