@@ -2,6 +2,6 @@ include:
   - board: nice_nano/nrf52840/zmk
     shield: temper_left nice_view_adapter nice_view
   - board: nice_nano/nrf52840/zmk
-    shield: temper_right nice_view_adapter nice_view
+    shield: temper_right
   - board: nice_nano/nrf52840/zmk
     shield: settings_reset
